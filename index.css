@@ -23,7 +23,7 @@ body{
     background-color: #18181B;
     color: #FFF;
     font-family: "Roboto";
-    
+    max-width: 100vw;
 }
 
 .presentation{
@@ -182,6 +182,8 @@ i{font-size: 50px;}
     align-items: center;
 }
 
+
+
 .projects h2{
     font-size: 36px;
     font-weight: 700;
@@ -237,4 +239,67 @@ i{font-size: 50px;}
     padding: 4px;
     color: #FFF;
     width: 90px;
+}
+
+@media (max-width: 1500px) {
+
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-page{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+        flex-direction: column;
+        margin-bottom: 300px;
+        margin: 300px 20px;
+    }
+
+    .about-page img{
+        width: 300px;
+    }
+
+    .about-text{
+        font-size: 18px;
+    }
+
+    .about-me{
+        margin: 0px 20px;
+    }
+
+    .images-tecnologies{
+        gap: 10px;
+    }
+
+    .tecnologies {
+        width: 60px;
+    }
+}
+
+@media (max-width: 970px) {
+    .projects-container{
+        flex-direction: column;
+        gap: 200px;   
+        justify-content: center;
+        align-items: center;
+    }
+
+    .project{
+        align-items: center;
+        padding: 15px 5px;
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .container-take-me{
+        display: flex;
+        justify-content: center;
+    }
 }
