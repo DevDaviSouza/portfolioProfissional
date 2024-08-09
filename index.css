@@ -219,7 +219,7 @@ i{font-size: 50px;}
     text-align: center;
     align-items: center;
     position: relative;
-    justify-content: center;
+    justify-content: space-around;
     font-size: 28px;
     font-weight: 600;
     border-radius: 7px;
@@ -229,6 +229,12 @@ i{font-size: 50px;}
     font-size: 18px;
     font-weight: 400;
     color: #00e00b;
+}
+
+.tecnologies-card{
+    color: #FFF !important;
+    font-size: 14px !important;
+    
 }
 
 @property --rotate {
