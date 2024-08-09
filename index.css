@@ -8,6 +8,13 @@
     src: url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Allan:wght@400;700&family=Lobster&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 }
 
+@font-face {
+    font-family: "Poppins";
+    src: url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Allan:wght@400;700&family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+}
+
+
+
 *{
     scrollbar-width: none;
     scrollbar-color: #8f54a0 #ffffff;
@@ -20,7 +27,7 @@ body{
     flex-direction: column;
     align-items: center;
     box-sizing: border-box;
-    background-color: #18181B;
+    background-color: #25252b;
     color: #FFF;
     font-family: "Roboto";
     max-width: 100vw;
@@ -79,7 +86,7 @@ i{font-size: 50px;}
     animation: cursor 0.8s infinite;
     animation: typing 20s steps(20) infinite;
     width: calc(100% + 15px);
-    background-color: #18181B;
+    background-color: #25252b;
 
 }
 
@@ -94,7 +101,7 @@ i{font-size: 50px;}
 
 @keyframes cursor {
     0%{
-        border-left: 2px solid #18181B;
+        border-left: 2px solid #25252b;
     }
 }
 
@@ -117,7 +124,7 @@ i{font-size: 50px;}
     border-radius: none;
     margin: 0%;
     padding: 0%;
-    background-color: #18181B;
+    background-color: #25252b;
     height: 100vh;
 }
 
@@ -199,18 +206,61 @@ i{font-size: 50px;}
     margin-bottom: 100px;
 }
 
+
+
 .project{
-    width: 450px;
+    width: 45vh;
+    height: 60vh;
+    background: #181818;
+    padding: 30px;
+    color: #FFF;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    background-color: #ffffff;
-    color: #000;
-    box-shadow: #46c914 15px 10px 20px -18px;
-    border-radius: 6px;
-    max-height: 230px;
-    padding: 20px 50px 20px 20px; 
+    text-align: center;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 600;
 }
+
+.project p{
+    font-size: 18px;
+    font-weight: 400;
+    color: #00e00b;
+}
+
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+}
+
+.project::before{
+    content: '';
+    position: absolute;
+    top: -1%;
+    left: -2%;
+    height: 102%;
+    width: 104%;
+    background-image: linear-gradient(var(--rotate), #00e00b, #009607, #005304);
+    z-index: -1;
+    animation: spin 6s linear infinite;
+}
+
+.project::after{
+    content: '';
+    position: absolute;
+    top: -1%;
+    left: -2%;
+    height: 102%;
+    width: 104%;
+    background-image: linear-gradient(var(--rotate), #00e00b, #009607, #005304);
+    z-index: -1;
+    filter: blur(30px);
+}
+
+
 
 .title-project{
     font-size: 18px;
@@ -290,16 +340,29 @@ i{font-size: 50px;}
 
     .project{
         align-items: center;
-        padding: 15px 5px;
-        width: 350px;
+        padding: 15px 20px;
+        width: 250px;
+        gap: 20px;
         display: flex;
         flex-direction: column;
         text-align: center;
         justify-content: center;
     }
 
+    .project p {
+        font-size: 16px;
+    }
+
     .container-take-me{
         display: flex;
         justify-content: center;
+    }
+
+    .tecnologies {
+        width: 40px;
+    }
+
+    #tecnologies-title{
+        font-size: 30px;
     }
 }
