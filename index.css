@@ -211,22 +211,22 @@ i{font-size: 50px;}
 .project{
     width: 45vh;
     height: 60vh;
-    background: #181818;
-    padding: 30px;
+    background: #222222;
+    padding:  0px 30px;
     color: #FFF;
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
     position: relative;
-    justify-content: space-around;
+    justify-content: space-evenly;
     font-size: 28px;
     font-weight: 600;
     border-radius: 7px;
 }
 
 .project p{
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 400;
     color: #00e00b;
 }
@@ -243,18 +243,7 @@ i{font-size: 50px;}
     inherits: false;
 }
 
-.project::before{
-    content: '';
-    position: absolute;
-    top: -1%;
-    left: -2%;
-    height: 102%;
-    width: 104%;
-    background-image: linear-gradient(var(--rotate), #00e00b, #009607, #005304);
-    z-index: -1;
-    animation: spin 6s linear infinite;
-    border-radius: 7px;
-}
+
 
 .project::after{
     content: '';
@@ -270,10 +259,17 @@ i{font-size: 50px;}
 
 
 
-.title-project{
-    font-size: 18px;
+.project h3{
+    font-size: 32px;
     font-weight: 700;
     margin-bottom: 10px;
+}
+
+.button-project{
+    text-shadow: 0.1em 0.1em 0.2em #46c914;
+    border: 1px solid #009607;
+    padding:  9px 25px;
+    border-radius: 3px;
 }
 
 .description-project{
